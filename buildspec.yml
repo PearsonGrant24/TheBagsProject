@@ -6,7 +6,7 @@ phases:
       - echo Installing NGINX
       - sudo apt-get update
       - sudo apt-get install nginx -y
-      - npm install
+      - npm install --legacy-peer-deps
   build:
     commands:
       - echo Build started on `date`
