@@ -6,7 +6,7 @@ phases:
       - echo Installing NGINX
       - sudo apt-get update
       - sudo apt-get install nginx -y
-      - sudo npm install
+      - npm install
   build:
     commands:
       - echo Build started on `date`
