@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing NGINX
+      - yum apt-get update
+      - yum apt-get install nginx -y
+      - npm install --legacy-peer-deps
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm run build
+      #- cp index.html /var/www/html/
+  post_build:
+    commands:
+      - echo Configuring NGINX
+      - echo Build completed successfully
+
+artifacts:
+  files:
+    - "**/*"
