@@ -4,8 +4,8 @@ phases:
   install:
     commands:
       - echo Installing NGINX
-      - yum apt-get update
-      - yum apt-get install nginx -y
+      - yum update -y
+      - yum install nginx -y
       - npm install --legacy-peer-deps
   build:
     commands:
