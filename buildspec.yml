@@ -2,20 +2,17 @@ version: 0.2
 
 phases:
   install:
+    runtime.versions:
+      nodejs: 20.12.2
+
     commands:
-      - echo Installing NGINX
-      - yum update -y
-      - yum install nginx -y
-      - npm install --legacy-peer-deps
+      - echo install started on `date`
+      - npm install
+
   build:
     commands:
-      - echo Build started on `date`
       - npm run build
-      #- cp index.html /var/www/html/
-  post_build:
-    commands:
-      - echo Configuring NGINX
-      - echo Build completed successfully
+      - echo Build completed successfully pear
 
 artifacts:
   files:
