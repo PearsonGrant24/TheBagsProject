@@ -6,7 +6,7 @@ files:
     destination: /home/ubuntu/server
 
 permissions:
-  - object: /
+  - object: /home/ubuntu/server
     pattern: "**"
     owner: ubuntu
     group: ubuntu
@@ -20,7 +20,7 @@ hooks:
   AfterInstall:
     - location: scripts/install.sh
       timeout: 300
-      runas: ec2-user
+      runas: ubuntu
 
   ApplicationStart:
     - location: scripts/app_install.sh
