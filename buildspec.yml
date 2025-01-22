@@ -7,6 +7,7 @@ phases:
 
     commands:
       - npm cache clean --force
+      - npm install --legacy-peer-deps
 
   build:
     commands:
